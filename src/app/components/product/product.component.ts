@@ -3,9 +3,8 @@ import {
   Input,
   Output,
   EventEmitter,
-  OnChanges,
-  SimpleChanges,
-  OnInit
+  OnInit,
+  DoCheck
 } from '@angular/core';
 import { Product } from '../../product.model';
 
@@ -14,7 +13,7 @@ import { Product } from '../../product.model';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnChanges, OnInit {
+export class ProductComponent implements OnInit, DoCheck {
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
@@ -22,13 +21,12 @@ export class ProductComponent implements OnChanges, OnInit {
     console.log('1. constructor');
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('2. ngOnChangues');
-    console.log(changes);
-  }
-
   ngOnInit(): void {
     console.log('3. ngOnInit');
+  }
+
+  ngDoCheck(): void {
+    console.log('4. ngDoCheck');
   }
 
   addCart() {
