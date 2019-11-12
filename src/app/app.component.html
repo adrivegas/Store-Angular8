@@ -1,3 +1,6 @@
-<!DOCTYPE html>
-<input type="text" [( ngModel )]="title" />
+<input type="text" [(ngModel)]="title" />
 {{ title }}
+
+<div *ngIf="title === 'adri'">
+  este es mi nombre
+</div>
