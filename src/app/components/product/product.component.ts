@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../product.model';
 
 @Component({
@@ -7,12 +7,5 @@ import { Product } from '../../product.model';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
-  product: Product = {
-    id: '1',
-    image: 'assets/images/camiseta.png',
-    title: 'Camiseta',
-    price: 80000,
-    description: 'bla bla bla bla bla'
-  };
-  constructor() {}
+  @Input() product: Product;
 }
