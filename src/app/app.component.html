@@ -1,6 +1,8 @@
 <input type="text" [(ngModel)]="title" />
 {{ title }}
 
+<app-product></app-product>
+
 <div [ngSwitch]="title">
   <p *ngSwitchCase="'Adri'">Soy Adri</p>
   <p *ngSwitchCase="'Violetta'">Soy Violetta</p>
