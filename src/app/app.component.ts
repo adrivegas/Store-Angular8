@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent {
 
   names = ['Adriana', 'Violeta', 'Isabella'];
 
-  products = [
+  products: Product[] = [
     {
       id: '1',
       image: 'assets/images/camiseta.png',
