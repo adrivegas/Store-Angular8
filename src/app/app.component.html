@@ -19,5 +19,8 @@
 </ul>
 
 <div *ngFor="let product of products">
-  <app-product [product]="product"></app-product>
+  <app-product
+    (productClicked)="clickProduct($event)"
+    [product]="product"
+  ></app-product>
 </div>
