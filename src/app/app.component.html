@@ -1,7 +1,11 @@
 <input type="text" [(ngModel)]="title" />
 {{ title }}
-<div *ngIf="title === 'adri'">
-  este es mi nombre
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'Adri'">Soy Adri</p>
+  <p *ngSwitchCase="'Violetta'">Soy Violetta</p>
+  <p *ngSwitchCase="'Isabella'">Soy Isabella</p>
+  <p *ngSwitchDefault>No hay match</p>
 </div>
 
 <button (click)="addName()">Add Name</button>
