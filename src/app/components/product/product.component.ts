@@ -4,7 +4,8 @@ import {
   Output,
   EventEmitter,
   OnChanges,
-  SimpleChanges
+  SimpleChanges,
+  OnInit
 } from '@angular/core';
 import { Product } from '../../product.model';
 
@@ -13,17 +14,21 @@ import { Product } from '../../product.model';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnChanges {
+export class ProductComponent implements OnChanges, OnInit {
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
   constructor() {
-    console.log('constructor');
+    console.log('1. constructor');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChangues');
+    console.log('2. ngOnChangues');
     console.log(changes);
+  }
+
+  ngOnInit(): void {
+    console.log('3. ngOnInit');
   }
 
   addCart() {
