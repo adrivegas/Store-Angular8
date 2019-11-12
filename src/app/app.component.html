@@ -4,3 +4,6 @@
 <div *ngIf="title === 'adri'">
   este es mi nombre
 </div>
+<ul>
+  <li *ngFor="let name of items; index as i">{{ name }} {{ i }}</li>
+</ul>
