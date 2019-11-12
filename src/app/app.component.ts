@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Store';
 
-  items = ['Adriana', 'Violeta', 'Isabella'];
+  names = ['Adriana', 'Violeta', 'Isabella'];
+
+  addName() {
+    this.names.push('Nuevo nombre');
+  }
+
+  deleteName(index: number) {
+    this.names.splice(index, 1);
+  }
 }
