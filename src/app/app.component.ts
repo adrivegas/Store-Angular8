@@ -1,63 +1,65 @@
-import { Component } from '@angular/core';
-import { Product } from './product.model';
+import { Component } from "@angular/core";
+import { Product } from "./product.model";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = 'Store';
+  title = "Store";
 
-  names = ['Adriana', 'Violeta', 'Isabella'];
+  names = ["Adriana", "Violeta", "Isabella"];
+
+  power = 10;
 
   products: Product[] = [
     {
-      id: '1',
-      image: 'assets/images/camiseta.png',
-      title: 'Camiseta',
+      id: "1",
+      image: "assets/images/camiseta.png",
+      title: "Camiseta",
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: "bla bla bla bla bla"
     },
     {
-      id: '2',
-      image: 'assets/images/hoodie.png',
-      title: 'Hoodie',
+      id: "2",
+      image: "assets/images/hoodie.png",
+      title: "Hoodie",
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: "bla bla bla bla bla"
     },
     {
-      id: '3',
-      image: 'assets/images/mug.png',
-      title: 'Mug',
+      id: "3",
+      image: "assets/images/mug.png",
+      title: "Mug",
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: "bla bla bla bla bla"
     },
     {
-      id: '4',
-      image: 'assets/images/pin.png',
-      title: 'Pin',
+      id: "4",
+      image: "assets/images/pin.png",
+      title: "Pin",
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: "bla bla bla bla bla"
     },
     {
-      id: '5',
-      image: 'assets/images/stickers1.png',
-      title: 'Stickers',
+      id: "5",
+      image: "assets/images/stickers1.png",
+      title: "Stickers",
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: "bla bla bla bla bla"
     },
     {
-      id: '6',
-      image: 'assets/images/stickers2.png',
-      title: 'Stickers',
+      id: "6",
+      image: "assets/images/stickers2.png",
+      title: "Stickers",
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: "bla bla bla bla bla"
     }
   ];
 
   addName() {
-    this.names.push('Nuevo nombre');
+    this.names.push("Nuevo nombre");
   }
 
   deleteName(index: number) {
@@ -65,7 +67,7 @@ export class AppComponent {
   }
 
   clickProduct(id: number) {
-    console.log('product');
+    console.log("product");
     console.log(id);
   }
 }
