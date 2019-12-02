@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo.component.scss']
 })
 export class DemoComponent implements OnInit {
-  constructor() {}
-
   title = 'Store';
 
   names = ['Adriana', 'Violeta', 'Isabella'];
+
+  objeto = {};
 
   power = 10;
 
